@@ -3,8 +3,7 @@ import { MatchResult } from "./MatchResult";
 const reader = new CSVFileReader('football.csv');
 reader.read();
 
-
-
+const dateOfFirstMath = reader.data[0][0];
 
 
 let manUnitedWins = 0;
