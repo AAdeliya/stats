@@ -1,12 +1,14 @@
 import { MatchReader} from "./MatchReader";
 import { MatchResult } from "./MatchResult";
+import { CSVFileReader } from "./CSVFileReader";
 
 
-const reader = new MatchReader('football.csv');
-reader.read();
+//Create an onject that satisfies the 'DataReader'interface
 
-const dateOfFirstMath = reader.data[0][0];
+const cSVFileReader = new CSVFileReader('football.csv');
+//Create an instance of MatchReader and pass in something satisfying the 'DataReader' interface 
 
+const matchReader = new MatchReader(cSVFileReader);
 
 let manUnitedWins = 0;
 for (let match of reader.data) {
