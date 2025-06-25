@@ -18,6 +18,8 @@ for (let match of matchReader.matches) {
   } else if (match[2] === 'Man United' && match[5] === MatchResult.AwayWin) {
     manUnitedWins++;
   }
+  
 }
+
 
 console.log(`Man United won ${manUnitedWins} games`);
