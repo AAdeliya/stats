@@ -7,8 +7,9 @@ const CSVFileReader_1 = require("./CSVFileReader");
 const cSVFileReader = new CSVFileReader_1.CSVFileReader('football.csv');
 //Create an instance of MatchReader and pass in something satisfying the 'DataReader' interface 
 const matchReader = new MatchReader_1.MatchReader(cSVFileReader);
+matchReader.load();
 let manUnitedWins = 0;
-for (let match of reader.data) {
+for (let match of matchReader.matches) {
     if (match[1] === 'Man United' && match[5] === MatchResult_1.MatchResult.HomeWin) {
         manUnitedWins++;
     }
