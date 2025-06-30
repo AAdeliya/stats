@@ -13,7 +13,8 @@ export interface OutputTarget {
 export class Summary {
   constructor(public analyzer: Analyzer, public output: OutputTarget) {
 
-  } }
+  } 
+}
 
  
 
