@@ -3,6 +3,7 @@ import { CSVFileReader } from "./CSVFileReader";
 import { ConsoleReport} from './reportTargets/ConsoleReport';
 import { WinAnalysis } from "./analyzers/WinAnalysis";
 import {Summary} from './Summary';
+import { HtmlReport } from "./reportTargets/HTMLReport";
 
 //Create an onject that satisfies the 'DataReader'interface
 
@@ -15,7 +16,7 @@ matchReader.load();
 
 const summary = new Summary(
   new WinAnalysis('Man United'),
-  new ConsoleReport()
+  new HtmlReport()
 );
 
 summary.buildAndPrintReport(matchReader.matches);
