@@ -1,4 +1,6 @@
 import { MatchData } from "./MatchData";
+import { WinAnalysis } from "./analyzers/WinAnalysis";
+import { HtmlReport } from "./reportTargets/HTMLReport";
 
 export interface Analyzer {
   run(matches: MatchData[]): string;
@@ -11,14 +13,8 @@ export interface OutputTarget {
 }
 
 export class Summary {
-  static printHello() {
-    console.log('hi');
-  }
+ 
 }
-
-  buildAndPrintReport(matches: MatchData[]) {
-    throw new Error("Method not implemented.");
-  }
   constructor(public analyzer: Analyzer, public outputTarget: OutputTarget) {
 
     this.buildAndPrintReport(matches: MatchData[]): void {
