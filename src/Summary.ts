@@ -11,17 +11,21 @@ export interface OutputTarget {
 }
 
 export class Summary {
+  static printHello() {
+    console.log('hi');
+  }
+}
+
   buildAndPrintReport(matches: MatchData[]) {
     throw new Error("Method not implemented.");
   }
   constructor(public analyzer: Analyzer, public outputTarget: OutputTarget) {
 
-    buildAndPrintReport(matches: MatchData[]): void {
+    this.buildAndPrintReport(matches: MatchData[]): void {
       const output = this.analyzer.run(matches);
       this.outputTarget.print(output);
     }
   } 
-}
 
- 
+Summary.buildAndPrintReport();
 
