@@ -11,6 +11,9 @@ export interface OutputTarget {
 }
 
 export class Summary {
+  buildAndPrintReport(matches: MatchData[]) {
+    throw new Error("Method not implemented.");
+  }
   constructor(public analyzer: Analyzer, public outputTarget: OutputTarget) {
 
     buildAndPrintReport(matches: MatchData[]): void {
